@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Button Click Counter</h1>
+    <p id="outputText">Welcome! Click the button below.</p>
+    <button id="clickButton">Click Me</button>
+	<script>
+        // Get references to the button and paragraph elements
+        const button = document.getElementById('clickButton');
+        const output = document.getElementById('outputText');
+
+        // Initialize a click counter
+        let clickCount = 0;
+
+        // Add a click event listener to the button
+        button.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 1) {
+                output.textContent = 'Button clicked once.';
+            } else {
+                output.textContent = `Button clicked ${clickCount} times.`;
+            }
+        });
+   </script>
+</body>
+
+
+</html>
