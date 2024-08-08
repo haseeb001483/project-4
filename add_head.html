@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Teacher</title>
+</head>
+<body>
+    <h1>Add Teacher</h1>
+    <form method="post" action="{% url 'teacher_add' %}">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br>
+        <label for="gender">Gender:</label><br>
+        <input type="text" id="grade" name="gender"><br>
+        <button type="submit">Add Student</button>
+    </form>
+</body>
+</html>
